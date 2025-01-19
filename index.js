@@ -45,7 +45,7 @@ socketIO.on('connection', (socket) => {
 
   socket.on('newChatMessage', (data) => {
     const { currentChatMesage, groupIdentifier, currentUser, timeData } = data
-    const filtered = chatGroups.filter((item) => item.id === groupIdentifier)
+    const filteredGroup = chatGroups.filter((item) => item.id === groupIdentifier)
 
     const newMessage = {
       id: createUniqueId(),
